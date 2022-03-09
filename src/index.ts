@@ -1,5 +1,4 @@
-const nowDate = new Date(Date.now());
-export const nowHour = nowDate.getHours();
+export const nowHour = new Date(Date.now()).getHours();
 
 export const isDayTime = () => nowHour > 5 && nowHour < 18;
 
