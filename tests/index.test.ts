@@ -1,19 +1,34 @@
 import * as MyTimes from "../src/index";
 
+beforeEach(() => {
+  jest.useFakeTimers();
+});
+
+afterEach(() => {
+  jest.runOnlyPendingTimers();
+  jest.useRealTimers();
+});
+
 test("now hour", () => {
-  expect(MyTimes.nowHour()).toBeGreaterThanOrEqual(0);
-  expect(MyTimes.nowHour()).toBeLessThanOrEqual(23);
+  jest.setSystemTime(new Date("2011-11-11T11:11:11"));
+  expect(MyTimes.nowHour()).toEqual(11);
+  jest.setSystemTime(new Date("2022-02-22T22:22:22"));
+  expect(MyTimes.nowHour()).toEqual(22);
 });
 test("day time", () => {
-  expect(MyTimes.isDayTime()).toEqual(
-    MyTimes.nowHour() > 5 && MyTimes.nowHour() < 18 ? true : false
-  );
+  jest.setSystemTime(new Date("2011-11-11T11:11:11"));
+  expect(MyTimes.isDayTime()).toEqual(true);
+  expect(MyTimes.isDayTime()).toEqual(!MyTimes.isNightTime());
+  jest.setSystemTime(new Date("2022-02-22T22:22:22"));
+  expect(MyTimes.isDayTime()).toEqual(false);
   expect(MyTimes.isDayTime()).toEqual(!MyTimes.isNightTime());
 });
 test("night time", () => {
-  expect(MyTimes.isNightTime()).toEqual(
-    MyTimes.nowHour() < 6 || MyTimes.nowHour() > 17 ? true : false
-  );
+  jest.setSystemTime(new Date("2011-11-11T11:11:11"));
+  expect(MyTimes.isNightTime()).toEqual(false);
+  expect(MyTimes.isNightTime()).toEqual(!MyTimes.isDayTime());
+  jest.setSystemTime(new Date("2022-02-22T22:22:22"));
+  expect(MyTimes.isNightTime()).toEqual(true);
   expect(MyTimes.isNightTime()).toEqual(!MyTimes.isDayTime());
 });
 
