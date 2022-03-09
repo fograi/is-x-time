@@ -1,0 +1,10 @@
+.*
+!.editorconfig
+!.gitignore
+!.gitattributes
+.*/
+!.github/
+coverage/
+dist/
+node_modules/
+test-the-code/
