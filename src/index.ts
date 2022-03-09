@@ -1,21 +1,21 @@
 export const nowHour = () => new Date(Date.now()).getHours();
 
-export const isDayTime = () => nowHour() > 5 && nowHour() < 18;
+export const isDayTime = (hour = nowHour()) => hour > 5 && hour < 18;
 
 export const isNightTime = () => !isDayTime();
 
-export const isNight = () => nowHour() >= 0 && nowHour() < 6;
+export const isNight = (hour = nowHour()) => hour >= 0 && hour < 6;
 
-export const isMorning = () => nowHour() > 5 && nowHour() < 12;
+export const isMorning = (hour = nowHour()) => hour > 5 && hour < 12;
 
-export const isAfternoon = () => nowHour() > 11 && nowHour() < 18;
+export const isAfternoon = (hour = nowHour()) => hour > 11 && hour < 18;
 
-export const isEvening = () => nowHour() > 17 && nowHour() <= 23;
+export const isEvening = (hour = nowHour()) => hour > 17 && hour <= 23;
 
-export const isBusinessHours = () => nowHour() > 8 && nowHour() < 17;
+export const isBusinessHours = (hour = nowHour()) => hour > 8 && hour < 17;
 
-export const isDayShift = () => nowHour() > 7 && nowHour() < 16;
+export const isDayShift = (hour = nowHour()) => hour > 7 && hour < 16;
 
-export const isEveningShift = () => nowHour() > 15 && nowHour() <= 23;
+export const isEveningShift = (hour = nowHour()) => hour > 15 && hour <= 23;
 
-export const isNightShift = () => nowHour() >= 0 && nowHour() < 8;
+export const isNightShift = (hour = nowHour()) => hour >= 0 && hour < 8;

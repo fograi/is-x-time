@@ -37,7 +37,7 @@ test("morning", () => {
 
 test("afternoon", () => {
   expect(MyTimes.isAfternoon()).toEqual(
-    MyTimes.nowHour() > 5 && MyTimes.nowHour() < 12 ? true : false
+    MyTimes.nowHour() > 11 && MyTimes.nowHour() < 18 ? true : false
   );
   expect(MyTimes.isAfternoon()).toEqual(
     !MyTimes.isNight() && !MyTimes.isMorning() && !MyTimes.isEvening()
