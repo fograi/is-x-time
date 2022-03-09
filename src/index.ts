@@ -2,7 +2,7 @@ export const nowHour = () => new Date(Date.now()).getHours();
 
 export const isDayTime = (hour = nowHour()) => hour > 5 && hour < 18;
 
-export const isNightTime = () => !isDayTime();
+export const isNightTime = (hour = nowHour()) => hour > 17 || hour < 6;
 
 export const isNight = (hour = nowHour()) => hour >= 0 && hour < 6;
 
