@@ -1,0 +1,22 @@
+<svg version="1.1" width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+    <clipPath id="cut-bottom-left">
+        <rect x="25" y="25" width="100" height="100" fill="white" />
+    </clipPath>
+    <circle cx="125" cy="125" r="100" fill="#DA5A2A" clip-path="url(#cut-bottom-left)" />
+    <clipPath id="cut-bottom-right">
+        <rect x="125" y="25" width="100" height="100" fill="white" />
+    </clipPath>
+    <circle cx="125" cy="125" r="100" fill="#0A174E" clip-path="url(#cut-bottom-right)" />
+    <clipPath id="cut-top-left">
+        <rect x="25" y="125" width="100" height="100" fill="white" />
+    </clipPath>
+    <circle cx="125" cy="125" r="100" fill="#0063B2" clip-path="url(#cut-top-left)" />
+    <clipPath id="cut-top-right">
+        <rect x="125" y="125" width="100" height="100" fill="white" />
+    </clipPath>
+    <circle cx="125" cy="125" r="100" fill="#F5D042" clip-path="url(#cut-top-right)" />
+    <text x="118" y="20" font-weight="bold">0</text>
+    <text x="225" y="125" font-weight="bold">6</text>
+    <text x="115" y="240" font-weight="bold">12</text>
+    <text x="0" y="125" font-weight="bold">18</text>
+</svg>

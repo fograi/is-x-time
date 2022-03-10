@@ -25,14 +25,9 @@ import { isAfternoon, isBusinessHours, ... }
 
 Returns the current hour number `0 - 23`.
 
-### DayTime, NightTime
+### NightTime, DayTime 
 
-`isDayTime()`
-
-Time is between `6:00am` and `5:59pm`, inclusive.
-Time is between `06:00` and `17:59`, inclusive.
-
-![DayTime](docs/gfx/day-time.svg)
+![NightTime, DayTime](docs/gfx/night-time-day-time.svg)
 
 `isNightTime()`
 
@@ -41,27 +36,47 @@ Time is between `18:00` and `05:59`, inclusive.
 
 ![NightTime](docs/gfx/night-time.svg)
 
+`isDayTime()`
+
+Time is between `6:00am` and `5:59pm`, inclusive.
+Time is between `06:00` and `17:59`, inclusive.
+
+![DayTime](docs/gfx/day-time.svg)
+
 ### Night, Morning, Afternoon, Evening
+
+![Night, Morning, Afternoon, Evening](docs/gfx/night-morning-afternoon-evening.svg)
 
 `isNight()`
 
 Time is between `0:00am` and `5:59am`, inclusive.
 Time is between `00:00` and `05:59`, inclusive.
 
+
+![Night](docs/gfx/night.svg)
+
 `isMorning()`
 
 Time is between `6:00am` and `11:59am`, inclusive.
 Time is between `06:00` and `11:59`, inclusive.
+
+
+![Morning](docs/gfx/morning.svg)
 
 `isAfternoon()`
 
 Time is between `12:00pm` and `5:59pm`, inclusive.
 Time is between `12:00` and `17:59`, inclusive.
 
+
+![Afternoon](docs/gfx/afternoon.svg)
+
 `isEvening()`
 
 Time is between `6:00pm` and `11:59pm`, inclusive.
 Time is between `18:00` and `23:59`, inclusive.
+
+![Evening](docs/gfx/evening.svg)
 
 ### Business Hours (9 2 5)
 
