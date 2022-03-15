@@ -7,7 +7,7 @@ Evaluate common time-of-day periods such as night-time or business-hours.
 Using npm:
 
 ```sh
-$ npm i is-x-time
+npm i is-x-time
 ```
 
 ## Usage
@@ -21,11 +21,13 @@ import { isAfternoon, isBusinessHours, ... }
 
 ## Complete list of is-x-time functions
 
+### Current Hour
+
 #### `nowHour()`
 
 Returns the current hour number `0 - 23`.
 
-### NightTime, DayTime 
+### NightTime, DayTime
 
 ![NightTime, DayTime](docs/gfx/night-time-day-time.svg)
 

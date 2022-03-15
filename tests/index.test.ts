@@ -21,6 +21,13 @@ test("now hour", () => {
   jest.setSystemTime(new Date("2022-02-22T22:22:22"));
   expect(MyTimes.nowHour()).toEqual(22);
 });
+
+test("now hour in", () => {
+  let sampleDate = new Date("2001-01-01T01:01:01");
+  jest.setSystemTime(sampleDate);
+  expect(sampleDate.getUTCDate()).toEqual(1);
+})
+
 test("day time", () => {
   jest.setSystemTime(new Date("2001-01-01T01:01:01"));
   expect(MyTimes.isDayTime()).toEqual(false);
@@ -35,6 +42,7 @@ test("day time", () => {
   expect(MyTimes.isDayTime()).toEqual(false);
   expect(MyTimes.isDayTime()).toEqual(!MyTimes.isNightTime());
 });
+
 test("night time", () => {
   jest.setSystemTime(new Date("2001-01-01T01:01:01"));
   expect(MyTimes.isNightTime()).toEqual(true);
