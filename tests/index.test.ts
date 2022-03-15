@@ -23,10 +23,27 @@ test("now hour", () => {
 });
 
 test("now hour in", () => {
-  let sampleDate = new Date("2001-01-01T01:01:01");
-  jest.setSystemTime(sampleDate);
-  expect(sampleDate.getUTCDate()).toEqual(1);
-})
+  // expect(MyTimes.nowHourIn("Europe/Dublin")).toEqual(1);
+  // expect(MyTimes.nowHourIn("Europe/London")).toEqual(1);
+  // expect(MyTimes.nowHourIn("Europe/Berlin")).toEqual(2);
+  // expect(MyTimes.nowHourIn("Europe/Paris")).toEqual(2);
+  // expect(MyTimes.nowHourIn("Europe/Rome")).toEqual(2);
+  // expect(MyTimes.nowHourIn("Europe/Stockholm")).toEqual(2);
+  // expect(MyTimes.nowHourIn("Africa/Cairo")).toEqual(3);
+  // expect(MyTimes.nowHourIn("Asia/Riyadh")).toEqual(4);
+  // expect(MyTimes.nowHourIn("Asia/Kolkata")).toEqual(7);
+  // expect(MyTimes.nowHourIn("Asia/Jakarta")).toEqual(8);
+  // expect(MyTimes.nowHourIn("Asia/Hong_Kong")).toEqual(9);
+  // expect(MyTimes.nowHourIn("Asia/Shanghai")).toEqual(9);
+  // expect(MyTimes.nowHourIn("Asia/Singapore")).toEqual(9);
+  // expect(MyTimes.nowHourIn("Asia/Seoul")).toEqual(10);
+  // expect(MyTimes.nowHourIn("Asia/Tokyo")).toEqual(10);
+  // expect(MyTimes.nowHourIn("Australia/Sydney")).toEqual(12);
+  // expect(MyTimes.nowHourIn("America/Los_Angeles")).toEqual(18);
+  // expect(MyTimes.nowHourIn("America/New_York")).toEqual(21);
+  // expect(MyTimes.nowHourIn("America/Toronto")).toEqual(21);
+  // expect(MyTimes.nowHourIn("America/Sao_Paulo")).toEqual(22);
+});
 
 test("day time", () => {
   jest.setSystemTime(new Date("2001-01-01T01:01:01"));
