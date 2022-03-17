@@ -95,7 +95,19 @@ Time is between `09:00` and `16:59`, inclusive.
 
 ### DayShift, EveningShift, NightShift
 
+![Night, Day, Evening Shifts](docs/gfx/night-day-evening-shifts.svg)
+
+#### `isNightShift()`
+
+![Night Shift](docs/gfx/night-shift.svg)
+
+Time is between `0:00am` and `7:59am`, inclusive.
+
+Time is between `00:00` and `07:59`, inclusive.
+
 #### `isDayShift()`
+
+![Day Shift](docs/gfx/day-shift.svg)
 
 Time is between `8:00am` and `3:59pm`, inclusive.
 
@@ -103,12 +115,8 @@ Time is between `08:00` and `15:59`, inclusive.
 
 #### `isEveningShift()`
 
+![Evening Shift](docs/gfx/evening-shift.svg)
+
 Time is between `4:00pm` and `11:59pm`, inclusive.
 
 Time is between `16:00` and `23:59`, inclusive.
-
-#### `isNightShift()`
-
-Time is between `0:00am` and `7:59am`, inclusive.
-
-Time is between `00:00` and `07:59`, inclusive.

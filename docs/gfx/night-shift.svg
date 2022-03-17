@@ -1,8 +1,8 @@
 <svg version="1.1" width="250" height="250" xmlns="http://www.w3.org/2000/svg">
-    <clipPath id="morning">
-        <rect x="125" y="125" width="125" height="125" />
+    <clipPath id="night-shift">
+        <polygon points="125 0, 125 125, 380 250, 250 0" />
     </clipPath>
-    <circle cx="125" cy="125" r="125" fill="#F5D042" clip-path="url(#morning)" />
+    <circle cx="125" cy="125" r="125" fill="#5c7aff" clip-path="url(#night-shift)" />
     <text x="119" y="15" font-weight="bold">0</text>
     <text x="115" y="242" font-weight="bold">12</text>
     <text x="145" y="20" font-weight="bold">1</text>
