@@ -15,6 +15,7 @@ npm i is-x-time
 ```js
 // CommonJS
 const IsXTime = require('is-x-time');
+// ES Modules
 // Load full library
 import * as IsXTime from "is-x-time";
 // Load individual function(s)
@@ -124,7 +125,3 @@ Time is between `08:00` and `15:59`, inclusive.
 Time is between `4:00pm` and `11:59pm`, inclusive.
 
 Time is between `16:00` and `23:59`, inclusive.
-
-## Publish Locally
-
-`npm link`
