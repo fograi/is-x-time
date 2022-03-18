@@ -1,8 +1,5 @@
 <svg version="1.1" width="250" height="250" xmlns="http://www.w3.org/2000/svg">
-    <clipPath id="evening-shift">
-        <polygon points="0 190, 125 125, 125 0, 0 0" />
-    </clipPath>
-    <circle cx="125" cy="125" r="125" fill="#DA5A2A" clip-path="url(#evening-shift)" />
+    <circle cx="125" cy="125" r="125" fill="#FFF" />
     <text x="119" y="15" font-weight="bold">0</text>
     <text x="115" y="242" font-weight="bold">12</text>
     <text x="145" y="20" font-weight="bold">1</text>

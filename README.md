@@ -25,6 +25,8 @@ import { isAfternoon, isBusinessHours, ... }
 
 #### `nowHour()`
 
+![24 Hour Clock](docs/gfx/clock-24-hour.svg)
+
 Returns the current hour number `0 - 23`.
 
 ### NightTime, DayTime
