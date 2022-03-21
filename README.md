@@ -19,7 +19,7 @@ const IsXTime = require('is-x-time');
 // Load full library
 import * as IsXTime from "is-x-time";
 // Load individual function(s)
-import { isAfternoon, isBusinessHours, ... }
+import { isAfternoon, isBusinessHours, ... } from "is-x-time";
 // Browser ES Modules
 <script type="module" src="/path/to/is-x-time.mjs"></script>
 <script type="module">
@@ -34,6 +34,8 @@ import { isAfternoon, isBusinessHours, ... }
 ```
 
 ## Complete list of is-x-time functions
+
+***
 
 ### Current Hour
 
@@ -50,9 +52,13 @@ Returns the current hour number `0 - 23` of the specified [IANATimeZone](src/typ
 
 Returns the current hour number `0 - 23` of the specified [AWS Region Code](src/types/aws-region-codes.ts).
 
+***
+
 ### NightTime, DayTime
 
 ![NightTime, DayTime](docs/gfx/night-time-day-time.svg)
+
+***
 
 #### `isNightTime()`
 
@@ -73,6 +79,9 @@ Time is between `18:00` and `05:59`, inclusive, in specified [IANATimeZone](src/
 Time is between `6:00pm` and `5:59am`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
 Time is between `18:00` and `05:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
+
+***
+
 #### `isDayTime()`
 
 ![DayTime](docs/gfx/day-time.svg)
@@ -91,9 +100,13 @@ Time is between `6:00am` and `5:59pm`, inclusive, in specified [AWS Region Code]
 
 Time is between `06:00` and `17:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
+***
+
 ### Night, Morning, Afternoon, Evening
 
 ![Night, Morning, Afternoon, Evening](docs/gfx/night-morning-afternoon-evening.svg)
+
+***
 
 #### `isNight()`
 
@@ -112,6 +125,8 @@ Time is between `00:00` and `05:59`, inclusive, in specified [IANATimeZone](src/
 Time is between `0:00am` and `5:59am`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
 Time is between `00:00` and `05:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
+
+***
 
 #### `isMorning()`
 
@@ -133,6 +148,8 @@ Time is between `6:00am` and `11:59am`, inclusive, in specified [AWS Region Code
 
 Time is between `06:00` and `11:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
+***
+
 #### `isAfternoon()`
 
 ![Afternoon](docs/gfx/afternoon.svg)
@@ -151,6 +168,8 @@ Time is between `12:00pm` and `5:59pm`, inclusive, in specified [AWS Region Code
 
 Time is between `12:00` and `17:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
+***
+
 #### `isEvening()`
 
 ![Evening](docs/gfx/evening.svg)
@@ -168,6 +187,8 @@ Time is between `18:00` and `23:59`, inclusive, in specified [IANATimeZone](src/
 Time is between `6:00pm` and `11:59pm`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
 Time is between `18:00` and `23:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
+
+***
 
 ### Business Hours (9 2 5)
 
@@ -189,9 +210,13 @@ Time is between `9:00am` and `4:59pm`, inclusive, in specified [AWS Region Code]
 
 Time is between `09:00` and `16:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
+***
+
 ### DayShift, EveningShift, NightShift
 
 ![Night, Day, Evening Shifts](docs/gfx/night-day-evening-shifts.svg)
+
+***
 
 #### `isNightShift()`
 
@@ -211,6 +236,8 @@ Time is between `0:00am` and `7:59am`, inclusive, in specified [AWS Region Code]
 
 Time is between `00:00` and `07:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
+***
+
 #### `isDayShift()`
 
 ![Day Shift](docs/gfx/day-shift.svg)
@@ -229,13 +256,15 @@ Time is between `8:00am` and `3:59pm`, inclusive, in specified [AWS Region Code]
 
 Time is between `08:00` and `15:59`, inclusive, in specified [AWS Region Code](src/types/aws-region-codes.ts).
 
+***
+
 #### `isEveningShift()`
 
 ![Evening Shift](docs/gfx/evening-shift.svg)
 
 Time is between `4:00pm` and `11:59pm`, inclusive.
 
-Time is between `16:00` and `23:59`, inclusive.
+Time is between `16:00` and `23:59`, inclusive122E-8542.
 #### `isEveningShiftIn(tz: IANATimeZone)`
 
 Time is between `4:00pm` and `11:59pm`, inclusive, in specified [IANATimeZone](src/types/iana-tz.ts).
