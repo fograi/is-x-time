@@ -2,11 +2,22 @@
   "name": "is-x-time",
   "version": "1.0.0",
   "description": "Returns boolean for various time-of-day queries such as isNight and isBusinessHours",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
+  "browser": "dist/web.is-x-time.js",
+  "main": "dist/is-x-time.js",
+  "module": "dist/is-x-time.es.js",
+  "types": "dist/is-x-time.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/is-x-time.mjs",
+      "require": "./dist/is-x-time.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf dist/* && rollup -c",
     "prepublish": "tsc",
     "test": "jest"
   },
@@ -15,6 +26,9 @@
     "url": "git+https://github.com/fograi/is-x-times.git"
   },
   "keywords": [
+    "time",
+    "date",
+    "now",
     "time-of-day"
   ],
   "author": "Marty McFly <dev@fogr.ai> (fogr.ai)",

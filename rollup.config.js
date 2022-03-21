@@ -15,6 +15,13 @@ export default {
       format: "esm",
       sourcemap: true,
     },
+    {
+      file: packageJson.browser,
+      format: "umd",
+      name: "IsXTime",
+      noConflict: true,
+      banner: ";",
+    },
   ],
   plugins: [commonjs(), typescript(), terser()],
 };
