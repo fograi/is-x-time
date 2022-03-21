@@ -14,7 +14,7 @@ export function nowHourIn(tz: IANATimeZone) {
   return parseInt(
     new Intl.DateTimeFormat("en", {
       hour: "numeric",
-      hour12: false,
+      hourCycle: "h23",
       timeZone: tz,
     }).format(Date.now())
   );

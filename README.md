@@ -23,14 +23,14 @@ import { isAfternoon, isBusinessHours, ... } from "is-x-time";
 // Browser ES Modules
 <script type="module" src="/path/to/is-x-time.mjs"></script>
 <script type="module">
-  import IsXTime from '/path/to/is-x-time.mjs'
+  import IsXTime from '/path/to/is-x-time.mjs';
   
-  IsXTime.nowHour()
+  IsXTime.nowHour();
   // 0-23
 </script>
 // Browser UMD
 <script type="module" src="/path/to/is-x-time.mjs"></script>
-<script nomodule defer src="/path/to/js.is-x-time.js"></script>
+<script nomodule defer src="/path/to/web.is-x-time.js"></script>
 ```
 
 ## Complete list of is-x-time functions
