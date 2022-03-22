@@ -19,7 +19,7 @@
   "scripts": {
     "build": "rm -rf dist/* && rollup -c",
     "prepublish": "tsc",
-    "test": "jest"
+    "test": "TZ=utc jest"
   },
   "repository": {
     "type": "git",
