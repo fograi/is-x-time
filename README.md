@@ -35,8 +35,6 @@ import { isAfternoon, isBusinessHours, ... } from "is-x-time";
 
 ## Complete list of is-x-time functions
 
-***
-
 ### Current Hour
 
 #### `nowHour()`

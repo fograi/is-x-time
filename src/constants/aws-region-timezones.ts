@@ -25,4 +25,5 @@ export const AWSRegionTZ: Map<AWSRegionCode, IANATimeZone> = new Map([
   ["eu-west-3", "Europe/Paris"],
   ["eu-north-1", "Europe/Stockholm"],
   ["me-south-1", "Asia/Riyadh"],
+  ["sa-east-1", "America/Sao_Paulo"],
 ]);
