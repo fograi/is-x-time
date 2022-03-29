@@ -1,5 +1,7 @@
 # is-x-time v1.0.0
 
+![CI](https://github.com/js-cookie/js-cookie/actions/workflows/ci.yml/badge.svg)
+
 Evaluate common time-of-day periods such as night-time or business-hours.
 
 ## Installation
