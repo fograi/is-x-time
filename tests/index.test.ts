@@ -1,5 +1,9 @@
 import * as MyTimes from "../src/index";
 
+/**
+ * Covers 25 years & 26 hours:minutes:seconds.
+ * Should be sufficient to test down to 15 minute timezones.
+ */
 const DATE_1999 = "1999-12-31T23:59:59";
 const DATE_2000 = "2000-01-01T00:00:00";
 const DATE_2001 = "2001-01-01T01:02:02";
@@ -27,6 +31,9 @@ const DATE_2022 = "2022-02-22T22:44:44";
 const DATE_2023 = "2023-03-23T23:46:46";
 const DATE_2024 = "2024-04-24T00:48:48";
 
+/**
+ * Covers most, if not all, unique timezones.
+ */
 const UTC_M11 = "Pacific/Niue";
 const UTC_M10 = "Pacific/Honolulu";
 const UTC_M930 = "Pacific/Marquesas";
@@ -64,6 +71,9 @@ const UTC_P12 = "Pacific/Fiji";
 const UTC_P1245 = "Pacific/Chatham";
 const UTC_P13 = "Pacific/Tongatapu";
 
+/**
+ * Covers most, if not all, unique AWS regions.
+ */
 const AWS_US_E_2 = "us-east-2";
 const AWS_US_E_1 = "us-east-1";
 const AWS_US_W_1 = "us-west-1";
@@ -416,8 +426,116 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(17);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(18);
   jest.setSystemTime(new Date(DATE_2006));
+  expect(MyTimes.nowHourIn(UTC_M11)).toEqual(19);
+  expect(MyTimes.nowHourIn(UTC_M10)).toEqual(20);
+  expect(MyTimes.nowHourIn(UTC_M930)).toEqual(20);
+  expect(MyTimes.nowHourIn(UTC_M9)).toEqual(21);
+  expect(MyTimes.nowHourIn(UTC_M8)).toEqual(23);
+  expect(MyTimes.nowHourIn(UTC_M7)).toEqual(0);
+  expect(MyTimes.nowHourIn(UTC_M6)).toEqual(0);
+  expect(MyTimes.nowHourIn(UTC_M5)).toEqual(2);
+  expect(MyTimes.nowHourIn(UTC_M4)).toEqual(2);
+  expect(MyTimes.nowHourIn(UTC_M330)).toEqual(3);
+  expect(MyTimes.nowHourIn(UTC_M3)).toEqual(3);
+  expect(MyTimes.nowHourIn(UTC_M2)).toEqual(4);
+  expect(MyTimes.nowHourIn(UTC_M1)).toEqual(5);
+  expect(MyTimes.nowHourIn(UTC_0)).toEqual(7);
+  expect(MyTimes.nowHourIn(UTC_P1)).toEqual(7);
+  expect(MyTimes.nowHourIn(UTC_P2)).toEqual(9);
+  expect(MyTimes.nowHourIn(UTC_P3)).toEqual(10);
+  expect(MyTimes.nowHourIn(UTC_P330)).toEqual(9);
+  expect(MyTimes.nowHourIn(UTC_P4)).toEqual(10);
+  expect(MyTimes.nowHourIn(UTC_P430)).toEqual(10);
+  expect(MyTimes.nowHourIn(UTC_P5)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P530)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P545)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P6)).toEqual(13);
+  expect(MyTimes.nowHourIn(UTC_P630)).toEqual(12);
+  expect(MyTimes.nowHourIn(UTC_P7)).toEqual(13);
+  expect(MyTimes.nowHourIn(UTC_P8)).toEqual(14);
+  expect(MyTimes.nowHourIn(UTC_P845)).toEqual(14);
+  expect(MyTimes.nowHourIn(UTC_P9)).toEqual(15);
+  expect(MyTimes.nowHourIn(UTC_P930)).toEqual(15);
+  expect(MyTimes.nowHourIn(UTC_P10)).toEqual(17);
+  expect(MyTimes.nowHourIn(UTC_P1030)).toEqual(16);
+  expect(MyTimes.nowHourIn(UTC_P11)).toEqual(17);
+  expect(MyTimes.nowHourIn(UTC_P12)).toEqual(18);
+  expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(18);
+  expect(MyTimes.nowHourIn(UTC_P13)).toEqual(19);
   jest.setSystemTime(new Date(DATE_2007));
+  expect(MyTimes.nowHourIn(UTC_M11)).toEqual(20);
+  expect(MyTimes.nowHourIn(UTC_M10)).toEqual(21);
+  expect(MyTimes.nowHourIn(UTC_M930)).toEqual(21);
+  expect(MyTimes.nowHourIn(UTC_M9)).toEqual(22);
+  expect(MyTimes.nowHourIn(UTC_M8)).toEqual(0);
+  expect(MyTimes.nowHourIn(UTC_M7)).toEqual(1);
+  expect(MyTimes.nowHourIn(UTC_M6)).toEqual(1);
+  expect(MyTimes.nowHourIn(UTC_M5)).toEqual(3);
+  expect(MyTimes.nowHourIn(UTC_M4)).toEqual(3);
+  expect(MyTimes.nowHourIn(UTC_M330)).toEqual(4);
+  expect(MyTimes.nowHourIn(UTC_M3)).toEqual(4);
+  expect(MyTimes.nowHourIn(UTC_M2)).toEqual(5);
+  expect(MyTimes.nowHourIn(UTC_M1)).toEqual(6);
+  expect(MyTimes.nowHourIn(UTC_0)).toEqual(8);
+  expect(MyTimes.nowHourIn(UTC_P1)).toEqual(8);
+  expect(MyTimes.nowHourIn(UTC_P2)).toEqual(10);
+  expect(MyTimes.nowHourIn(UTC_P3)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P330)).toEqual(10);
+  expect(MyTimes.nowHourIn(UTC_P4)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P430)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P5)).toEqual(12);
+  expect(MyTimes.nowHourIn(UTC_P530)).toEqual(12);
+  expect(MyTimes.nowHourIn(UTC_P545)).toEqual(12);
+  expect(MyTimes.nowHourIn(UTC_P6)).toEqual(14);
+  expect(MyTimes.nowHourIn(UTC_P630)).toEqual(13);
+  expect(MyTimes.nowHourIn(UTC_P7)).toEqual(14);
+  expect(MyTimes.nowHourIn(UTC_P8)).toEqual(15);
+  expect(MyTimes.nowHourIn(UTC_P845)).toEqual(15);
+  expect(MyTimes.nowHourIn(UTC_P9)).toEqual(16);
+  expect(MyTimes.nowHourIn(UTC_P930)).toEqual(16);
+  expect(MyTimes.nowHourIn(UTC_P10)).toEqual(18);
+  expect(MyTimes.nowHourIn(UTC_P1030)).toEqual(17);
+  expect(MyTimes.nowHourIn(UTC_P11)).toEqual(18);
+  expect(MyTimes.nowHourIn(UTC_P12)).toEqual(19);
+  expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(19);
+  expect(MyTimes.nowHourIn(UTC_P13)).toEqual(20);
   jest.setSystemTime(new Date(DATE_2008));
+  expect(MyTimes.nowHourIn(UTC_M11)).toEqual(21);
+  expect(MyTimes.nowHourIn(UTC_M10)).toEqual(22);
+  expect(MyTimes.nowHourIn(UTC_M930)).toEqual(22);
+  expect(MyTimes.nowHourIn(UTC_M9)).toEqual(23);
+  expect(MyTimes.nowHourIn(UTC_M8)).toEqual(1);
+  expect(MyTimes.nowHourIn(UTC_M7)).toEqual(2);
+  expect(MyTimes.nowHourIn(UTC_M6)).toEqual(2);
+  expect(MyTimes.nowHourIn(UTC_M5)).toEqual(4);
+  expect(MyTimes.nowHourIn(UTC_M4)).toEqual(4);
+  expect(MyTimes.nowHourIn(UTC_M330)).toEqual(5);
+  expect(MyTimes.nowHourIn(UTC_M3)).toEqual(5);
+  expect(MyTimes.nowHourIn(UTC_M2)).toEqual(6);
+  expect(MyTimes.nowHourIn(UTC_M1)).toEqual(7);
+  expect(MyTimes.nowHourIn(UTC_0)).toEqual(9);
+  expect(MyTimes.nowHourIn(UTC_P1)).toEqual(9);
+  expect(MyTimes.nowHourIn(UTC_P2)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P3)).toEqual(11);
+  expect(MyTimes.nowHourIn(UTC_P330)).toEqual(12);
+  expect(MyTimes.nowHourIn(UTC_P4)).toEqual(12);
+  expect(MyTimes.nowHourIn(UTC_P430)).toEqual(12);
+  expect(MyTimes.nowHourIn(UTC_P5)).toEqual(13);
+  expect(MyTimes.nowHourIn(UTC_P530)).toEqual(13);
+  expect(MyTimes.nowHourIn(UTC_P545)).toEqual(14);
+  expect(MyTimes.nowHourIn(UTC_P6)).toEqual(15);
+  expect(MyTimes.nowHourIn(UTC_P630)).toEqual(14);
+  expect(MyTimes.nowHourIn(UTC_P7)).toEqual(15);
+  expect(MyTimes.nowHourIn(UTC_P8)).toEqual(16);
+  expect(MyTimes.nowHourIn(UTC_P845)).toEqual(17);
+  expect(MyTimes.nowHourIn(UTC_P9)).toEqual(17);
+  expect(MyTimes.nowHourIn(UTC_P930)).toEqual(17);
+  expect(MyTimes.nowHourIn(UTC_P10)).toEqual(19);
+  expect(MyTimes.nowHourIn(UTC_P1030)).toEqual(18);
+  expect(MyTimes.nowHourIn(UTC_P11)).toEqual(19);
+  expect(MyTimes.nowHourIn(UTC_P12)).toEqual(20);
+  expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(21);
+  expect(MyTimes.nowHourIn(UTC_P13)).toEqual(21);
   jest.setSystemTime(new Date(DATE_2009));
   jest.setSystemTime(new Date(DATE_2010));
   jest.setSystemTime(new Date(DATE_2011));
@@ -577,7 +695,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(!MyTimes.isNightTimeIn(UTC_M10));
   expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(!MyTimes.isNightTimeIn(UTC_M930));
+  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(!MyTimes.isNightTimeIn(UTC_M9));
   expect(MyTimes.isDayTimeIn(UTC_M8)).toEqual(true);
@@ -591,7 +711,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(!MyTimes.isNightTimeIn(UTC_M4));
   expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(!MyTimes.isNightTimeIn(UTC_M330));
+  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(!MyTimes.isNightTimeIn(UTC_M3));
   expect(MyTimes.isDayTimeIn(UTC_M2)).toEqual(false);
@@ -607,21 +729,31 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(!MyTimes.isNightTimeIn(UTC_P3));
   expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(!MyTimes.isNightTimeIn(UTC_P330));
+  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(!MyTimes.isNightTimeIn(UTC_P4));
   expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(!MyTimes.isNightTimeIn(UTC_P430));
+  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P430)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(!MyTimes.isNightTimeIn(UTC_P5));
   expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(!MyTimes.isNightTimeIn(UTC_P530));
+  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P530)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(!MyTimes.isNightTimeIn(UTC_P545));
+  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P545)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(!MyTimes.isNightTimeIn(UTC_P6));
   expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(!MyTimes.isNightTimeIn(UTC_P630));
+  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P630)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(!MyTimes.isNightTimeIn(UTC_P7));
   expect(MyTimes.isDayTimeIn(UTC_P8)).toEqual(true);
@@ -629,15 +761,21 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(!MyTimes.isNightTimeIn(UTC_P9));
   expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(!MyTimes.isNightTimeIn(UTC_P930));
+  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(!MyTimes.isNightTimeIn(UTC_P10));
   expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(!MyTimes.isNightTimeIn(UTC_P1030));
+  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1030)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(!MyTimes.isNightTimeIn(UTC_P12));
   expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(!MyTimes.isNightTimeIn(UTC_P1245));
+  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1245)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(!MyTimes.isNightTimeIn(UTC_P13));
   jest.setSystemTime(new Date(DATE_2000));
@@ -646,7 +784,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(!MyTimes.isNightTimeIn(UTC_M10));
   expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(!MyTimes.isNightTimeIn(UTC_M930));
+  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(!MyTimes.isNightTimeIn(UTC_M9));
   expect(MyTimes.isDayTimeIn(UTC_M8)).toEqual(true);
@@ -660,7 +800,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(!MyTimes.isNightTimeIn(UTC_M4));
   expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(!MyTimes.isNightTimeIn(UTC_M330));
+  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(!MyTimes.isNightTimeIn(UTC_M3));
   expect(MyTimes.isDayTimeIn(UTC_M2)).toEqual(false);
@@ -676,21 +818,31 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(!MyTimes.isNightTimeIn(UTC_P3));
   expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(!MyTimes.isNightTimeIn(UTC_P330));
+  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(!MyTimes.isNightTimeIn(UTC_P4));
   expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(!MyTimes.isNightTimeIn(UTC_P430));
+  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P430)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(!MyTimes.isNightTimeIn(UTC_P5));
   expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(!MyTimes.isNightTimeIn(UTC_P530));
+  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P530)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(!MyTimes.isNightTimeIn(UTC_P545));
+  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P545)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(!MyTimes.isNightTimeIn(UTC_P6));
   expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(!MyTimes.isNightTimeIn(UTC_P630));
+  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P630)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(!MyTimes.isNightTimeIn(UTC_P7));
   expect(MyTimes.isDayTimeIn(UTC_P8)).toEqual(true);
@@ -698,15 +850,21 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(!MyTimes.isNightTimeIn(UTC_P9));
   expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(!MyTimes.isNightTimeIn(UTC_P930));
+  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(!MyTimes.isNightTimeIn(UTC_P10));
   expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(!MyTimes.isNightTimeIn(UTC_P1030));
+  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1030)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(!MyTimes.isNightTimeIn(UTC_P12));
   expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(!MyTimes.isNightTimeIn(UTC_P1245));
+  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1245)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(!MyTimes.isNightTimeIn(UTC_P13));
   jest.setSystemTime(new Date(DATE_2001));
@@ -715,7 +873,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(!MyTimes.isNightTimeIn(UTC_M10));
   expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(!MyTimes.isNightTimeIn(UTC_M930));
+  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(!MyTimes.isNightTimeIn(UTC_M9));
   expect(MyTimes.isDayTimeIn(UTC_M8)).toEqual(true);
@@ -729,7 +889,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(!MyTimes.isNightTimeIn(UTC_M4));
   expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(!MyTimes.isNightTimeIn(UTC_M330));
+  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(!MyTimes.isNightTimeIn(UTC_M3));
   expect(MyTimes.isDayTimeIn(UTC_M2)).toEqual(false);
@@ -745,21 +907,31 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(!MyTimes.isNightTimeIn(UTC_P3));
   expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(!MyTimes.isNightTimeIn(UTC_P330));
+  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(!MyTimes.isNightTimeIn(UTC_P4));
   expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(!MyTimes.isNightTimeIn(UTC_P430));
+  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P430)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(!MyTimes.isNightTimeIn(UTC_P5));
   expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(!MyTimes.isNightTimeIn(UTC_P530));
+  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P530)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(!MyTimes.isNightTimeIn(UTC_P545));
+  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P545)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(!MyTimes.isNightTimeIn(UTC_P6));
   expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(!MyTimes.isNightTimeIn(UTC_P630));
+  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P630)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(!MyTimes.isNightTimeIn(UTC_P7));
   expect(MyTimes.isDayTimeIn(UTC_P8)).toEqual(true);
@@ -767,15 +939,21 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(!MyTimes.isNightTimeIn(UTC_P9));
   expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(!MyTimes.isNightTimeIn(UTC_P930));
+  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(!MyTimes.isNightTimeIn(UTC_P10));
   expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(!MyTimes.isNightTimeIn(UTC_P1030));
+  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1030)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(!MyTimes.isNightTimeIn(UTC_P12));
   expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(!MyTimes.isNightTimeIn(UTC_P1245));
+  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1245)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(!MyTimes.isNightTimeIn(UTC_P13));
   jest.setSystemTime(new Date(DATE_2002));
@@ -784,7 +962,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M10)).toEqual(!MyTimes.isNightTimeIn(UTC_M10));
   expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(!MyTimes.isNightTimeIn(UTC_M930));
+  expect(MyTimes.isDayTimeIn(UTC_M930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M9)).toEqual(!MyTimes.isNightTimeIn(UTC_M9));
   expect(MyTimes.isDayTimeIn(UTC_M8)).toEqual(false);
@@ -798,7 +978,9 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M4)).toEqual(!MyTimes.isNightTimeIn(UTC_M4));
   expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(!MyTimes.isNightTimeIn(UTC_M330));
+  expect(MyTimes.isDayTimeIn(UTC_M330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_M330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_M3)).toEqual(!MyTimes.isNightTimeIn(UTC_M3));
   expect(MyTimes.isDayTimeIn(UTC_M2)).toEqual(false);
@@ -814,21 +996,31 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(false);
   expect(MyTimes.isDayTimeIn(UTC_P3)).toEqual(!MyTimes.isNightTimeIn(UTC_P3));
   expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(false);
-  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(!MyTimes.isNightTimeIn(UTC_P330));
+  expect(MyTimes.isDayTimeIn(UTC_P330)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P330)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P4)).toEqual(!MyTimes.isNightTimeIn(UTC_P4));
   expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(!MyTimes.isNightTimeIn(UTC_P430));
+  expect(MyTimes.isDayTimeIn(UTC_P430)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P430)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P5)).toEqual(!MyTimes.isNightTimeIn(UTC_P5));
   expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(!MyTimes.isNightTimeIn(UTC_P530));
+  expect(MyTimes.isDayTimeIn(UTC_P530)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P530)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(!MyTimes.isNightTimeIn(UTC_P545));
+  expect(MyTimes.isDayTimeIn(UTC_P545)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P545)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P6)).toEqual(!MyTimes.isNightTimeIn(UTC_P6));
   expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(!MyTimes.isNightTimeIn(UTC_P630));
+  expect(MyTimes.isDayTimeIn(UTC_P630)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P630)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P7)).toEqual(!MyTimes.isNightTimeIn(UTC_P7));
   expect(MyTimes.isDayTimeIn(UTC_P8)).toEqual(true);
@@ -836,15 +1028,21 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P9)).toEqual(!MyTimes.isNightTimeIn(UTC_P9));
   expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(!MyTimes.isNightTimeIn(UTC_P930));
+  expect(MyTimes.isDayTimeIn(UTC_P930)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P930)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P10)).toEqual(!MyTimes.isNightTimeIn(UTC_P10));
   expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(!MyTimes.isNightTimeIn(UTC_P1030));
+  expect(MyTimes.isDayTimeIn(UTC_P1030)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1030)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P12)).toEqual(!MyTimes.isNightTimeIn(UTC_P12));
   expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(true);
-  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(!MyTimes.isNightTimeIn(UTC_P1245));
+  expect(MyTimes.isDayTimeIn(UTC_P1245)).toEqual(
+    !MyTimes.isNightTimeIn(UTC_P1245)
+  );
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_P13)).toEqual(!MyTimes.isNightTimeIn(UTC_P13));
   jest.setSystemTime(new Date(DATE_2003));
