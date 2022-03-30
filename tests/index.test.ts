@@ -1181,6 +1181,30 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(1);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(3);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(22);
+  jest.setSystemTime(new Date(DATE_2001));
+  jest.setSystemTime(new Date(DATE_2002));
+  jest.setSystemTime(new Date(DATE_2003));
+  jest.setSystemTime(new Date(DATE_2004));
+  jest.setSystemTime(new Date(DATE_2005));
+  jest.setSystemTime(new Date(DATE_2006));
+  jest.setSystemTime(new Date(DATE_2007));
+  jest.setSystemTime(new Date(DATE_2008));
+  jest.setSystemTime(new Date(DATE_2009));
+  jest.setSystemTime(new Date(DATE_2010));
+  jest.setSystemTime(new Date(DATE_2011));
+  jest.setSystemTime(new Date(DATE_2012));
+  jest.setSystemTime(new Date(DATE_2013));
+  jest.setSystemTime(new Date(DATE_2014));
+  jest.setSystemTime(new Date(DATE_2015));
+  jest.setSystemTime(new Date(DATE_2016));
+  jest.setSystemTime(new Date(DATE_2017));
+  jest.setSystemTime(new Date(DATE_2018));
+  jest.setSystemTime(new Date(DATE_2019));
+  jest.setSystemTime(new Date(DATE_2020));
+  jest.setSystemTime(new Date(DATE_2021));
+  jest.setSystemTime(new Date(DATE_2022));
+  jest.setSystemTime(new Date(DATE_2023));
+  jest.setSystemTime(new Date(DATE_2024));
 });
 
 test("day time", () => {
