@@ -1205,7 +1205,7 @@ test("now hour in IANATimeZone 2024_04_24_00_48", () => {
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(13);
 });
 
-test("now hour in AWSRegionCode", () => {
+test("now hour in AWSRegionCode 1999_12_31_23_59", () => {
   jest.setSystemTime(new Date(DATE_1999_12_31_23_59));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(18);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(18);
@@ -1231,6 +1231,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(0);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(2);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(21);
+});
+
+test("now hour in AWSRegionCode 2000_01_01_00_00", () => {
   jest.setSystemTime(new Date(DATE_2000_01_01_00_00));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(19);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(19);
@@ -1256,6 +1259,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(1);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(3);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(22);
+});
+
+test("now hour in AWSRegionCode 2001_01_01_01_02", () => {
   jest.setSystemTime(new Date(DATE_2001_01_01_01_02));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(20);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(20);
@@ -1281,6 +1287,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(2);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(4);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(23);
+});
+
+test("now hour in AWSRegionCode 2002_02_02_02_04", () => {
   jest.setSystemTime(new Date(DATE_2002_02_02_02_04));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(21);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(21);
@@ -1306,6 +1315,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(3);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(5);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(0);
+});
+
+test("now hour in AWSRegionCode 2003_03_03_03_06", () => {
   jest.setSystemTime(new Date(DATE_2003_03_03_03_06));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(22);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(22);
@@ -1331,6 +1343,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(4);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(6);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(0);
+});
+
+test("now hour in AWSRegionCode 2004_04_04_04_08", () => {
   jest.setSystemTime(new Date(DATE_2004_04_04_04_08));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(23);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(23);
@@ -1356,6 +1371,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(6);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(7);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(1);
+});
+
+test("now hour in AWSRegionCode 2005_05_05_05_10", () => {
   jest.setSystemTime(new Date(DATE_2005_05_05_05_10));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(1);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(1);
@@ -1381,6 +1399,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(7);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(8);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(2);
+});
+
+test("now hour in AWSRegionCode 2006_06_06_06_12", () => {
   jest.setSystemTime(new Date(DATE_2006_06_06_06_12));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(2);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(2);
@@ -1406,6 +1427,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(8);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(9);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(3);
+});
+
+test("now hour in AWSRegionCode 2007_07_07_07_14", () => {
   jest.setSystemTime(new Date(DATE_2007_07_07_07_14));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(3);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(3);
@@ -1431,6 +1455,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(9);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(10);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(4);
+});
+
+test("now hour in AWSRegionCode 2008_08_08_08_16", () => {
   jest.setSystemTime(new Date(DATE_2008_08_08_08_16));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(4);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(4);
@@ -1456,6 +1483,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(10);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(11);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(5);
+});
+
+test("now hour in AWSRegionCode 2009_09_09_09_18", () => {
   jest.setSystemTime(new Date(DATE_2009_09_09_09_18));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(5);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(5);
@@ -1481,6 +1511,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(11);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(12);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(6);
+});
+
+test("now hour in AWSRegionCode 2010_10_10_10_20", () => {
   jest.setSystemTime(new Date(DATE_2010_10_10_10_20));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(6);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(6);
@@ -1506,6 +1539,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(12);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(13);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(7);
+});
+
+test("now hour in AWSRegionCode 2011_11_11_11_22", () => {
   jest.setSystemTime(new Date(DATE_2011_11_11_11_22));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(6);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(6);
@@ -1531,6 +1567,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(12);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(14);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(9);
+});
+
+test("now hour in AWSRegionCode 2012_12_12_12_24", () => {
   jest.setSystemTime(new Date(DATE_2012_12_12_12_24));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(7);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(7);
@@ -1556,6 +1595,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(13);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(15);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(10);
+});
+
+test("now hour in AWSRegionCode 2013_03_13_13_26", () => {
   jest.setSystemTime(new Date(DATE_2013_03_13_13_26));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(9);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(9);
@@ -1581,6 +1623,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(14);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(16);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(10);
+});
+
+test("now hour in AWSRegionCode 2014_04_14_14_28", () => {
   jest.setSystemTime(new Date(DATE_2014_04_14_14_28));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(10);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(10);
@@ -1606,6 +1651,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(16);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(17);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(11);
+});
+
+test("now hour in AWSRegionCode 2015_05_15_15_30", () => {
   jest.setSystemTime(new Date(DATE_2015_05_15_15_30));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(11);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(11);
@@ -1631,6 +1679,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(17);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(18);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(12);
+});
+
+test("now hour in AWSRegionCode 2016_06_16_16_32", () => {
   jest.setSystemTime(new Date(DATE_2016_06_16_16_32));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(12);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(12);
@@ -1656,6 +1707,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(18);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(19);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(13);
+});
+
+test("now hour in AWSRegionCode 2017_07_17_17_34", () => {
   jest.setSystemTime(new Date(DATE_2017_07_17_17_34));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(13);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(13);
@@ -1681,6 +1735,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(19);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(20);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(14);
+});
+
+test("now hour in AWSRegionCode 2018_08_18_18_36", () => {
   jest.setSystemTime(new Date(DATE_2018_08_18_18_36));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(14);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(14);
@@ -1706,6 +1763,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(20);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(21);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(15);
+});
+
+test("now hour in AWSRegionCode 2019_09_19_19_38", () => {
   jest.setSystemTime(new Date(DATE_2019_09_19_19_38));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(15);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(15);
@@ -1731,6 +1791,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(21);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(22);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(16);
+});
+
+test("now hour in AWSRegionCode 2020_02_20_20_40", () => {
   jest.setSystemTime(new Date(DATE_2020_02_20_20_40));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(15);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(15);
@@ -1756,6 +1819,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(21);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(23);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(17);
+});
+
+test("now hour in AWSRegionCode 2021_01_21_21_42", () => {
   jest.setSystemTime(new Date(DATE_2021_01_21_21_42));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(16);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(16);
@@ -1781,6 +1847,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(22);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(0);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(18);
+});
+
+test("now hour in AWSRegionCode 2022_02_22_22_44", () => {
   jest.setSystemTime(new Date(DATE_2022_02_22_22_44));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(17);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(17);
@@ -1806,6 +1875,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(23);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(1);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(19);
+});
+
+test("now hour in AWSRegionCode 2023_03_23_23_46", () => {
   jest.setSystemTime(new Date(DATE_2023_03_23_23_46));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(19);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(19);
@@ -1831,6 +1903,9 @@ test("now hour in AWSRegionCode", () => {
   expect(MyTimes.nowHourInAWS(AWS_EU_N_1)).toEqual(0);
   expect(MyTimes.nowHourInAWS(AWS_ME_S_1)).toEqual(2);
   expect(MyTimes.nowHourInAWS(AWS_SA_E_1)).toEqual(20);
+});
+
+test("now hour in AWSRegionCode 2024_04_24_00_48", () => {
   jest.setSystemTime(new Date(DATE_2024_04_24_00_48));
   expect(MyTimes.nowHourInAWS(AWS_US_E_2)).toEqual(20);
   expect(MyTimes.nowHourInAWS(AWS_US_E_1)).toEqual(20);
@@ -1939,7 +2014,7 @@ test("day time", () => {
   expect(MyTimes.isDayTime()).toEqual(!MyTimes.isNightTime());
 });
 
-test("day time in IANATimeZone", () => {
+test("day time in IANATimeZone ", () => {
   jest.setSystemTime(new Date(DATE_1999_12_31_23_59));
   expect(MyTimes.isDayTimeIn(UTC_M11)).toEqual(true);
   expect(MyTimes.isDayTimeIn(UTC_M11)).toEqual(!MyTimes.isNightTimeIn(UTC_M11));
@@ -2364,7 +2439,7 @@ test("day time in IANATimeZone", () => {
   expect(MyTimes.isDayTimeIn(UTC_M11)).toEqual(!MyTimes.isNightTimeIn(UTC_M11));
 });
 
-test("day time in AWSRegionCode", () => {
+test("day time in AWSRegionCode ", () => {
   jest.setSystemTime(new Date(DATE_1999_12_31_23_59));
   expect(MyTimes.isDayTimeInAWS(AWS_US_E_2)).toEqual(false);
   expect(MyTimes.isDayTimeInAWS(AWS_US_E_2)).toEqual(
@@ -2545,7 +2620,7 @@ test("night time", () => {
   expect(MyTimes.isNightTime()).toEqual(!MyTimes.isDayTime());
 });
 
-test("night time in IANATimeZone", () => {
+test("night time in IANATimeZone ", () => {
   jest.setSystemTime(new Date(DATE_1999_12_31_23_59));
   expect(MyTimes.isNightTimeIn(UTC_M11)).toEqual(false);
   expect(MyTimes.isNightTimeIn(UTC_M11)).toEqual(!MyTimes.isDayTimeIn(UTC_M11));
@@ -2970,7 +3045,7 @@ test("night time in IANATimeZone", () => {
   expect(MyTimes.isNightTimeIn(UTC_M11)).toEqual(!MyTimes.isDayTimeIn(UTC_M11));
 });
 
-test("night time in AWSRegionCode", () => {
+test("night time in AWSRegionCode ", () => {
   jest.setSystemTime(new Date(DATE_1999_12_31_23_59));
   expect(MyTimes.isNightTimeInAWS(AWS_US_E_2)).toEqual(true);
   expect(MyTimes.isNightTimeInAWS(AWS_US_E_2)).toEqual(
