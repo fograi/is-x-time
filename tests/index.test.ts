@@ -165,7 +165,7 @@ test("now hour", () => {
   expect(MyTimes.nowHour()).toEqual(0);
 });
 
-test("now hour in IANATimeZone", () => {
+test("now hour in IANATimeZone 1999_12_31_23_59", () => {
   jest.setSystemTime(new Date(DATE_1999_12_31_23_59));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(12);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(13);
@@ -203,6 +203,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(12);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(13);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(13);
+});
+
+test("now hour in IANATimeZone 2000_01_01_00_00", () => {
   jest.setSystemTime(new Date(DATE_2000_01_01_00_00));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(13);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(14);
@@ -240,6 +243,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(13);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(13);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(14);
+});
+
+test("now hour in IANATimeZone 2001_01_01_01_02", () => {
   jest.setSystemTime(new Date(DATE_2001_01_01_01_02));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(14);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(15);
@@ -277,6 +283,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(13);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(14);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(15);
+});
+
+test("now hour in IANATimeZone 2002_02_02_02_04", () => {
   jest.setSystemTime(new Date(DATE_2002_02_02_02_04));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(15);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(16);
@@ -314,6 +323,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(14);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(15);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(15);
+});
+
+test("now hour in IANATimeZone 2003_03_03_03_06", () => {
   jest.setSystemTime(new Date(DATE_2003_03_03_03_06));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(16);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(17);
@@ -351,6 +363,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(15);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(16);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(16);
+});
+
+test("now hour in IANATimeZone 2004_04_04_04_08", () => {
   jest.setSystemTime(new Date(DATE_2004_04_04_04_08));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(17);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(18);
@@ -388,6 +403,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(16);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(16);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(17);
+});
+
+test("now hour in IANATimeZone 2005_05_05_05_10", () => {
   jest.setSystemTime(new Date(DATE_2005_05_05_05_10));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(18);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(19);
@@ -425,6 +443,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(17);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(17);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(18);
+});
+
+test("now hour in IANATimeZone 2006_06_06_06_12", () => {
   jest.setSystemTime(new Date(DATE_2006_06_06_06_12));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(19);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(20);
@@ -462,6 +483,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(18);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(18);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(19);
+});
+
+test("now hour in IANATimeZone 2007_07_07_07_14", () => {
   jest.setSystemTime(new Date(DATE_2007_07_07_07_14));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(20);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(21);
@@ -499,6 +523,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(19);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(19);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(20);
+});
+
+test("now hour in IANATimeZone 2008_08_08_08_16", () => {
   jest.setSystemTime(new Date(DATE_2008_08_08_08_16));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(21);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(22);
@@ -536,6 +563,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(20);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(21);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(21);
+});
+
+test("now hour in IANATimeZone 2009_09_09_09_18", () => {
   jest.setSystemTime(new Date(DATE_2009_09_09_09_18));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(22);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(23);
@@ -573,6 +603,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(21);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(22);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(22);
+});
+
+test("now hour in IANATimeZone 2010_10_10_10_20", () => {
   jest.setSystemTime(new Date(DATE_2010_10_10_10_20));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(23);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(0);
@@ -610,6 +643,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(22);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(0);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(23);
+});
+
+test("now hour in IANATimeZone 2011_11_11_11_22", () => {
   jest.setSystemTime(new Date(DATE_2011_11_11_11_22));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(0);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(1);
@@ -647,6 +683,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(0);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(1);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(0);
+});
+
+test("now hour in IANATimeZone 2012_12_12_12_24", () => {
   jest.setSystemTime(new Date(DATE_2012_12_12_12_24));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(1);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(2);
@@ -684,6 +723,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(1);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(2);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(1);
+});
+
+test("now hour in IANATimeZone 2013_03_13_13_26", () => {
   jest.setSystemTime(new Date(DATE_2013_03_13_13_26));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(2);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(3);
@@ -721,6 +763,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(1);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(3);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(2);
+});
+
+test("now hour in IANATimeZone 2014_04_14_14_28", () => {
   jest.setSystemTime(new Date(DATE_2014_04_14_14_28));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(3);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(4);
@@ -758,6 +803,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(2);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(3);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(3);
+});
+
+test("now hour in IANATimeZone 2015_05_15_15_30", () => {
   jest.setSystemTime(new Date(DATE_2015_05_15_15_30));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(4);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(5);
@@ -795,6 +843,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(3);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(4);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(4);
+});
+
+test("now hour in IANATimeZone 2016_06_16_16_32", () => {
   jest.setSystemTime(new Date(DATE_2016_06_16_16_32));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(5);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(6);
@@ -832,6 +883,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(4);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(5);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(5);
+});
+
+test("now hour in IANATimeZone 2017_07_17_17_34", () => {
   jest.setSystemTime(new Date(DATE_2017_07_17_17_34));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(6);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(7);
@@ -869,6 +923,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(5);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(6);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(6);
+});
+
+test("now hour in IANATimeZone 2018_08_18_18_36", () => {
   jest.setSystemTime(new Date(DATE_2018_08_18_18_36));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(7);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(8);
@@ -906,6 +963,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(6);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(7);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(7);
+});
+
+test("now hour in IANATimeZone 2019_09_19_19_38", () => {
   jest.setSystemTime(new Date(DATE_2019_09_19_19_38));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(8);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(9);
@@ -943,6 +1003,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(7);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(8);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(8);
+});
+
+test("now hour in IANATimeZone 2020_02_20_20_40", () => {
   jest.setSystemTime(new Date(DATE_2020_02_20_20_40));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(9);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(10);
@@ -980,6 +1043,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(8);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(10);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(9);
+});
+
+test("now hour in IANATimeZone 2021_01_21_21_42", () => {
   jest.setSystemTime(new Date(DATE_2021_01_21_21_42));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(10);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(11);
@@ -1017,6 +1083,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(9);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(11);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(10);
+});
+
+test("now hour in IANATimeZone 2022_02_22_22_44", () => {
   jest.setSystemTime(new Date(DATE_2022_02_22_22_44));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(11);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(12);
@@ -1054,6 +1123,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(10);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(12);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(11);
+});
+
+test("now hour in IANATimeZone 2023_03_23_23_46", () => {
   jest.setSystemTime(new Date(DATE_2023_03_23_23_46));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(12);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(13);
@@ -1091,6 +1163,9 @@ test("now hour in IANATimeZone", () => {
   expect(MyTimes.nowHourIn(UTC_P12)).toEqual(11);
   expect(MyTimes.nowHourIn(UTC_P1245)).toEqual(13);
   expect(MyTimes.nowHourIn(UTC_P13)).toEqual(12);
+});
+
+test("now hour in IANATimeZone 2024_04_24_00_48", () => {
   jest.setSystemTime(new Date(DATE_2024_04_24_00_48));
   expect(MyTimes.nowHourIn(UTC_M11)).toEqual(13);
   expect(MyTimes.nowHourIn(UTC_M10)).toEqual(14);
