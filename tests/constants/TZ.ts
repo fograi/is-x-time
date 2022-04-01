@@ -1,0 +1,39 @@
+/**
+ * Covers most, if not all, unique timezones.
+ */
+export const UTC_M11 = "Pacific/Niue";
+export const UTC_M10 = "Pacific/Honolulu";
+export const UTC_M930 = "Pacific/Marquesas";
+export const UTC_M9 = "Pacific/Gambier";
+export const UTC_M8 = "America/Vancouver";
+export const UTC_M7 = "America/Yellowknife";
+export const UTC_M6 = "America/Belize";
+export const UTC_M5 = "America/Havana";
+export const UTC_M4 = "America/Barbados";
+export const UTC_M330 = "America/St_Johns";
+export const UTC_M3 = "America/Argentina/Buenos_Aires";
+export const UTC_M2 = "America/Noronha";
+export const UTC_M1 = "Atlantic/Cape_Verde";
+export const UTC_0 = "Atlantic/Faroe";
+export const UTC_P1 = "Africa/Algiers";
+export const UTC_P2 = "Africa/Cairo";
+export const UTC_P3 = "Asia/Baghdad";
+export const UTC_P330 = "Asia/Tehran";
+export const UTC_P4 = "Indian/Mauritius";
+export const UTC_P430 = "Asia/Kabul";
+export const UTC_P5 = "Indian/Maldives";
+export const UTC_P530 = "Asia/Kolkata";
+export const UTC_P545 = "Asia/Kathmandu";
+export const UTC_P6 = "Asia/Omsk";
+export const UTC_P630 = "Indian/Cocos";
+export const UTC_P7 = "Indian/Christmas";
+export const UTC_P8 = "Asia/Brunei";
+export const UTC_P845 = "Australia/Eucla";
+export const UTC_P9 = "Pacific/Palau";
+export const UTC_P930 = "Australia/Broken_Hill";
+export const UTC_P10 = "Asia/Vladivostok";
+export const UTC_P1030 = "Australia/Lord_Howe";
+export const UTC_P11 = "Pacific/Norfolk";
+export const UTC_P12 = "Pacific/Fiji";
+export const UTC_P1245 = "Pacific/Chatham";
+export const UTC_P13 = "Pacific/Tongatapu";
