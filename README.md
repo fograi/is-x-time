@@ -23,15 +23,15 @@ import * as IsXTime from "is-x-time";
 // Load individual function(s)
 import { isAfternoon, isBusinessHours, ... } from "is-x-time";
 // Browser ES Modules
-<script type="module" src="/path/to/is-x-time.mjs"></script>
+<script type="module" src="/path/to/is-x-time.js"></script>
 <script type="module">
-  import IsXTime from '/path/to/is-x-time.mjs';
+  import IsXTime from '/path/to/is-x-time.js';
   
   IsXTime.nowHour();
   // 0-23
 </script>
 // Browser UMD
-<script type="module" src="/path/to/is-x-time.mjs"></script>
+<script type="module" src="/path/to/is-x-time.js"></script>
 <script nomodule defer src="/path/to/web.is-x-time.js"></script>
 ```
 
@@ -57,6 +57,8 @@ Returns the current hour number `0 - 23` of the specified [AWS Region Code](src/
 ### NightTime, DayTime
 
 ![NightTime, DayTime](docs/gfx/night-time-day-time.svg)
+
+A calendar day split into two 12 hour periods.
 
 ***
 
@@ -105,6 +107,8 @@ Time is between `06:00` and `17:59`, inclusive, in specified [AWS Region Code](s
 ### Night, Morning, Afternoon, Evening
 
 ![Night, Morning, Afternoon, Evening](docs/gfx/night-morning-afternoon-evening.svg)
+
+A calendar day split into four 6 hour periods.
 
 ***
 
@@ -215,6 +219,8 @@ Time is between `09:00` and `16:59`, inclusive, in specified [AWS Region Code](s
 ### DayShift, EveningShift, NightShift
 
 ![Night, Day, Evening Shifts](docs/gfx/night-day-evening-shifts.svg)
+
+A calendar day split into three 8 hour periods.
 
 ***
 
