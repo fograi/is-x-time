@@ -1,5 +1,4 @@
 import * as MyTimes from "../src/index";
-import * as AWS from "./constants/AWS";
 import * as TZ from "./constants/TZ";
 import * as DATES from "./constants/DATES";
 
