@@ -270,7 +270,7 @@ Time is between `08:00` and `15:59`, inclusive, in specified [AWS Region Code](s
 
 Time is between `4:00pm` and `11:59pm`, inclusive.
 
-Time is between `16:00` and `23:59`, inclusive122E-8542.
+Time is between `16:00` and `23:59`, inclusive.
 #### `isEveningShiftIn(tz: IANATimeZone)`
 
 Time is between `4:00pm` and `11:59pm`, inclusive, in specified [IANATimeZone](src/types/iana-tz.ts).
