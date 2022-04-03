@@ -1,4 +1,4 @@
-import * as MyTimes from "../src/index";
+import { isDayTimeInAWS, isNightTimeInAWS } from "../src/index";
 import * as AWS from "./constants/AWS";
 import * as DATES from "./constants/DATES";
 
@@ -15,101 +15,100 @@ afterEach(() => {
 
 test("day time in AWSRegionCode 1999_12_31_23_59", () => {
   jest.setSystemTime(new Date(DATES.DATE_1999_12_31_23_59));
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_E_2)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_E_2)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_US_E_2)
+  expect(isDayTimeInAWS(AWS.AWS_US_E_2)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_US_E_2)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_US_E_2)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_E_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_E_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_US_E_1)
+  expect(isDayTimeInAWS(AWS.AWS_US_E_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_US_E_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_US_E_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_W_1)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_W_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_US_W_1)
+  expect(isDayTimeInAWS(AWS.AWS_US_W_1)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_US_W_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_US_W_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_W_2)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_US_W_2)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_US_W_2)
+  expect(isDayTimeInAWS(AWS.AWS_US_W_2)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_US_W_2)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_US_W_2)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AF_S_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AF_S_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AF_S_1)
+  expect(isDayTimeInAWS(AWS.AWS_AF_S_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_AF_S_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AF_S_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_E_1)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_E_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_E_1)
+  expect(isDayTimeInAWS(AWS.AWS_AP_E_1)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_AP_E_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_E_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_SE_3)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_SE_3)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_SE_3)
+  expect(isDayTimeInAWS(AWS.AWS_AP_SE_3)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_AP_SE_3)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_SE_3)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_S_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_S_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_S_1)
+  expect(isDayTimeInAWS(AWS.AWS_AP_S_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_AP_S_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_S_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_NE_3)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_NE_3)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_NE_3)
+  expect(isDayTimeInAWS(AWS.AWS_AP_NE_3)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_AP_NE_3)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_NE_3)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_NE_2)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_NE_2)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_NE_2)
+  expect(isDayTimeInAWS(AWS.AWS_AP_NE_2)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_AP_NE_2)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_NE_2)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_SE_1)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_SE_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_SE_1)
+  expect(isDayTimeInAWS(AWS.AWS_AP_SE_1)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_AP_SE_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_SE_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_SE_2)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_SE_2)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_SE_2)
+  expect(isDayTimeInAWS(AWS.AWS_AP_SE_2)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_AP_SE_2)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_SE_2)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_NE_1)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_AP_NE_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_AP_NE_1)
+  expect(isDayTimeInAWS(AWS.AWS_AP_NE_1)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_AP_NE_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_AP_NE_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_CA_C_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_CA_C_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_CA_C_1)
+  expect(isDayTimeInAWS(AWS.AWS_CA_C_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_CA_C_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_CA_C_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_CN_N_1)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_CN_N_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_CN_N_1)
+  expect(isDayTimeInAWS(AWS.AWS_CN_N_1)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_CN_N_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_CN_N_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_CN_NW_1)).toEqual(true);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_CN_NW_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_CN_NW_1)
+  expect(isDayTimeInAWS(AWS.AWS_CN_NW_1)).toEqual(true);
+  expect(isDayTimeInAWS(AWS.AWS_CN_NW_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_CN_NW_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_C_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_C_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_EU_C_1)
+  expect(isDayTimeInAWS(AWS.AWS_EU_C_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_EU_C_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_EU_C_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_W_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_W_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_EU_W_1)
+  expect(isDayTimeInAWS(AWS.AWS_EU_W_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_EU_W_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_EU_W_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_W_2)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_W_2)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_EU_W_2)
+  expect(isDayTimeInAWS(AWS.AWS_EU_W_2)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_EU_W_2)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_EU_W_2)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_S_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_S_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_EU_S_1)
+  expect(isDayTimeInAWS(AWS.AWS_EU_S_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_EU_S_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_EU_S_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_W_3)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_W_3)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_EU_W_3)
+  expect(isDayTimeInAWS(AWS.AWS_EU_W_3)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_EU_W_3)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_EU_W_3)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_N_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_EU_N_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_EU_N_1)
+  expect(isDayTimeInAWS(AWS.AWS_EU_N_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_EU_N_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_EU_N_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_ME_S_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_ME_S_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_ME_S_1)
+  expect(isDayTimeInAWS(AWS.AWS_ME_S_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_ME_S_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_ME_S_1)
   );
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_SA_E_1)).toEqual(false);
-  expect(MyTimes.isDayTimeInAWS(AWS.AWS_SA_E_1)).toEqual(
-    !MyTimes.isNightTimeInAWS(AWS.AWS_SA_E_1)
+  expect(isDayTimeInAWS(AWS.AWS_SA_E_1)).toEqual(false);
+  expect(isDayTimeInAWS(AWS.AWS_SA_E_1)).toEqual(
+    !isNightTimeInAWS(AWS.AWS_SA_E_1)
   );
 });
-
