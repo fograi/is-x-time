@@ -7,37 +7,69 @@ Evaluate common time-of-day periods.
 ## Complete list of is-x-time functions
 
 [`nowHour(): number`](#nowhour)
+
 [`nowHourIn(tz: IANATimeZone): number`](#nowhourintz-ianatimezone)
+
 [`nowHourInAWS(awsrc: AWSRegionCode): number`](#nowhourinawsawsrc-awsregioncode)
+
 [`isDayTime(): boolean`](#isdaytime)
+
 [`isDayTimeIn(tz: IANATimeZone): boolean`](#isdaytimeintz-ianatimezone)
+
 [`isDayTimeInAWS(awsrc: AWSRegionCode): boolean`](#isdaytimeinawsawsrc-awsregioncode)
+
 [`isNightTime(): boolean`](#isnighttime)
+
 [`isNightTimeIn(tz: IANATimeZone): boolean`](#isnighttimeintz-ianatimezone)
+
 [`isNightTimeInAWS(awsrc: AWSRegionCode): boolean`](#isnighttimeinawsawsrc-awsregioncode)
+
 [`isNight(): boolean`](#isnight)
+
 [`isNightIn(tz: IANATimeZone): boolean`](#isnightintz-ianatimezone)
+
 [`isNightInAWS(awsrc: AWSRegionCode): boolean`](#isnightinawsawsrc-awsregioncode)
+
 [`isMorning(): boolean`](#ismorning)
+
 [`isMorningIn(tz: IANATimeZone): boolean`](#ismorningintz-ianatimezone)
+
 [`isMorningInAWS(awsrc: AWSRegionCode): boolean`](#ismorninginawsawsrc-awsregioncode)
+
 [`isAfternoon(): boolean`](#isafternoon)
+
 [`isAfternoonIn(tz: IANATimeZone): boolean`](#isafternoonintz-ianatimezone)
+
 [`isAfternoonInAWS(awsrc: AWSRegionCode): boolean`](#isafternooninawsawsrc-awsregioncode)
+
 [`isEvening(): boolean`](#isevening)
+
 [`isEveningIn(tz: IANATimeZone): boolean`](#iseveningintz-ianatimezone)
+
 [`isEveningInAWS(awsrc: AWSRegionCode): boolean`](#iseveninginawsawsrc-awsregioncode)
+
 [`isBusinessHours(): boolean`](#isbusinesshours)
+
 [`isBusinessHoursIn(tz: IANATimeZone): boolean`](#isbusinesshoursintz-ianatimezone)
+
 [`isBusinessHoursInAWS(awsrc: AWSRegionCode): boolean`](#isbusinesshoursintz-ianatimezone)
+
 [`isDayShift(): boolean`](#isdayshift)
+
 [`isDayShiftIn(tz: IANATimeZone): boolean`](#isdayshiftintz-ianatimezone)
+
 [`isDayShiftInAWS(awsrc: AWSRegionCode): boolean`](#isdayshiftinawsawsrc-awsregioncode)
+
 [`isEveningShift(): boolean`](#iseveningshift)
+
 [`isEveningShiftIn(tz: IANATimeZone): boolean`](#iseveningshiftintz-ianatimezone)
+
 [`isEveningShiftInAWS(awsrc: AWSRegionCode): boolean`](#iseveningshiftinawsawsrc-awsregioncode)
+
 [`isNightShift(): boolean`](#isnightshift)
+
 [`isNightShiftIn(tz: IANATimeZone): boolean`](#isnightshiftintz-ianatimezone)
+
 [`isNightShiftInAWS(awsrc: AWSRegionCode): boolean`](#isnightshiftinawsawsrc-awsregioncode)
 
 ## Installation
