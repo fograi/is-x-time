@@ -12,6 +12,8 @@ Evaluate common time-of-day periods.
 
 [`nowHourInAWS(awsrc: AWSRegionCode): number`](#nowhourinawsawsrc-awsregioncode)
 
+***
+
 [`isDayTime(): boolean`](#isdaytime)
 
 [`isDayTimeIn(tz: IANATimeZone): boolean`](#isdaytimeintz-ianatimezone)
@@ -23,6 +25,8 @@ Evaluate common time-of-day periods.
 [`isNightTimeIn(tz: IANATimeZone): boolean`](#isnighttimeintz-ianatimezone)
 
 [`isNightTimeInAWS(awsrc: AWSRegionCode): boolean`](#isnighttimeinawsawsrc-awsregioncode)
+
+***
 
 [`isNight(): boolean`](#isnight)
 
@@ -48,11 +52,15 @@ Evaluate common time-of-day periods.
 
 [`isEveningInAWS(awsrc: AWSRegionCode): boolean`](#iseveninginawsawsrc-awsregioncode)
 
+***
+
 [`isBusinessHours(): boolean`](#isbusinesshours)
 
 [`isBusinessHoursIn(tz: IANATimeZone): boolean`](#isbusinesshoursintz-ianatimezone)
 
 [`isBusinessHoursInAWS(awsrc: AWSRegionCode): boolean`](#isbusinesshoursintz-ianatimezone)
+
+***
 
 [`isDayShift(): boolean`](#isdayshift)
 
