@@ -164,6 +164,9 @@ test("afternoon in AWS 1999_12_31_23_59", () => {
       !isMorningInAWS(AWS.AWS_SA_E_1) &&
       !isEveningInAWS(AWS.AWS_SA_E_1)
   );
+});
+
+test("afternoon in AWS 2000_01_01_00_00", () => {
   jest.setSystemTime(new Date(DATES.DATE_2000_01_01_00_00));
   expect(isAfternoonInAWS(AWS.AWS_US_E_2)).toEqual(false);
   expect(isAfternoonInAWS(AWS.AWS_US_E_2)).toEqual(
