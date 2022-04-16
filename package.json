@@ -1,6 +1,6 @@
 {
   "name": "is-x-time",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.1",
   "description": "Returns boolean for various time-of-day queries such as isNight and isBusinessHours",
   "browser": "dist/web.is-x-time.js",
   "main": "dist/is-x-time.js",
