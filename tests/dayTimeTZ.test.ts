@@ -595,7 +595,7 @@ test("day time in IANATimeZone 2006_06_06_06_12", () => {
   expect(isDayTimeIn(TZ.UTC_P10)).toEqual(!isNightTimeIn(TZ.UTC_P10));
   expect(isDayTimeIn(TZ.UTC_P1030)).toEqual(true);
   expect(isDayTimeIn(TZ.UTC_P1030)).toEqual(!isNightTimeIn(TZ.UTC_P1030));
-  expect(isDayTimeIn(TZ.UTC_P11)).toEqual(false);
+  expect(isDayTimeIn(TZ.UTC_P11)).toEqual(true);
   expect(isDayTimeIn(TZ.UTC_P11)).toEqual(!isNightTimeIn(TZ.UTC_P11));
   expect(isDayTimeIn(TZ.UTC_P12)).toEqual(false);
   expect(isDayTimeIn(TZ.UTC_P12)).toEqual(!isNightTimeIn(TZ.UTC_P12));
@@ -1483,7 +1483,7 @@ test("day time in IANATimeZone 2018_08_18_18_36", () => {
   expect(isDayTimeIn(TZ.UTC_P10)).toEqual(!isNightTimeIn(TZ.UTC_P10));
   expect(isDayTimeIn(TZ.UTC_P1030)).toEqual(false);
   expect(isDayTimeIn(TZ.UTC_P1030)).toEqual(!isNightTimeIn(TZ.UTC_P1030));
-  expect(isDayTimeIn(TZ.UTC_P11)).toEqual(true);
+  expect(isDayTimeIn(TZ.UTC_P11)).toEqual(false);
   expect(isDayTimeIn(TZ.UTC_P11)).toEqual(!isNightTimeIn(TZ.UTC_P11));
   expect(isDayTimeIn(TZ.UTC_P12)).toEqual(true);
   expect(isDayTimeIn(TZ.UTC_P12)).toEqual(!isNightTimeIn(TZ.UTC_P12));
