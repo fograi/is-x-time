@@ -1,9 +1,11 @@
+import { defineConfig } from "rollup";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import packageJson from "./package.json";
 import { terser } from "rollup-plugin-terser";
 import filesize from "rollup-plugin-filesize";
-export default {
+
+export default defineConfig({
   input: "./src/index.ts",
   output: [
     {
@@ -25,4 +27,4 @@ export default {
     },
   ],
   plugins: [commonjs(), typescript(), terser(), filesize()],
-};
+});
