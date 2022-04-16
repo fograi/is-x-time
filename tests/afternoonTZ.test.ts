@@ -168,6 +168,12 @@ test("afternoon in IANATimeZone 1999_12_31_23_59", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
@@ -337,6 +343,12 @@ test("afternoon in IANATimeZone 2000_01_01_00_00", () => {
     !isMorningIn(TZ.UTC_P1030) &&
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
+  );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
   );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
@@ -508,6 +520,12 @@ test("afternoon in IANATimeZone 2001_01_01_01_02", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
@@ -677,6 +695,12 @@ test("afternoon in IANATimeZone 2002_02_02_02_04", () => {
     !isMorningIn(TZ.UTC_P1030) &&
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
+  );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
   );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
@@ -848,6 +872,12 @@ test("afternoon in IANATimeZone 2003_03_03_03_06", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
@@ -1017,6 +1047,12 @@ test("afternoon in IANATimeZone 2004_04_04_04_08", () => {
     !isMorningIn(TZ.UTC_P1030) &&
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
+  );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
   );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
@@ -1188,6 +1224,12 @@ test("afternoon in IANATimeZone 2005_05_05_05_10", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
@@ -1358,7 +1400,13 @@ test("afternoon in IANATimeZone 2006_06_06_06_12", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -1528,7 +1576,13 @@ test("afternoon in IANATimeZone 2007_07_07_07_14", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -1698,7 +1752,13 @@ test("afternoon in IANATimeZone 2008_08_08_08_16", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -1868,7 +1928,13 @@ test("afternoon in IANATimeZone 2009_09_09_09_18", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -2038,7 +2104,13 @@ test("afternoon in IANATimeZone 2010_10_10_10_20", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -2208,7 +2280,13 @@ test("afternoon in IANATimeZone 2011_11_11_11_22", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -2378,7 +2456,13 @@ test("afternoon in IANATimeZone 2012_12_12_12_24", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -2548,7 +2632,13 @@ test("afternoon in IANATimeZone 2013_03_13_13_26", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -2718,7 +2808,13 @@ test("afternoon in IANATimeZone 2014_04_14_14_28", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -2888,7 +2984,13 @@ test("afternoon in IANATimeZone 2015_05_15_15_30", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -3058,7 +3160,13 @@ test("afternoon in IANATimeZone 2016_06_16_16_32", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -3228,7 +3336,13 @@ test("afternoon in IANATimeZone 2017_07_17_17_34", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -3398,7 +3512,13 @@ test("afternoon in IANATimeZone 2018_08_18_18_36", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -3568,7 +3688,13 @@ test("afternoon in IANATimeZone 2019_09_19_19_38", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -3738,7 +3864,13 @@ test("afternoon in IANATimeZone 2020_02_20_20_40", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -3908,7 +4040,13 @@ test("afternoon in IANATimeZone 2021_01_21_21_42", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -4078,7 +4216,13 @@ test("afternoon in IANATimeZone 2022_02_22_22_44", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -4248,7 +4392,13 @@ test("afternoon in IANATimeZone 2023_03_23_23_46", () => {
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
   );
-  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(false);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
+  );
+  expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(
     !isMorningIn(TZ.UTC_P12) &&
       !isEveningIn(TZ.UTC_P12) &&
@@ -4417,6 +4567,12 @@ test("afternoon in IANATimeZone 2024_04_24_00_48", () => {
     !isMorningIn(TZ.UTC_P1030) &&
       !isEveningIn(TZ.UTC_P1030) &&
       !isNightIn(TZ.UTC_P1030)
+  );
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(true);
+  expect(isAfternoonIn(TZ.UTC_P11)).toEqual(
+    !isMorningIn(TZ.UTC_P11) &&
+      !isEveningIn(TZ.UTC_P11) &&
+      !isNightIn(TZ.UTC_P11)
   );
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(true);
   expect(isAfternoonIn(TZ.UTC_P12)).toEqual(

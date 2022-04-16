@@ -139,6 +139,10 @@ test("evening shift in IANATimeZone 1999_12_31_23_59", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -278,6 +282,10 @@ test("evening shift in IANATimeZone 2000_01_01_00_00", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -419,6 +427,10 @@ test("evening shift in IANATimeZone 2001_01_01_01_02", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -558,6 +570,10 @@ test("evening shift in IANATimeZone 2002_02_02_02_04", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -699,6 +715,10 @@ test("evening shift in IANATimeZone 2003_03_03_03_06", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -838,6 +858,10 @@ test("evening shift in IANATimeZone 2004_04_04_04_08", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -979,6 +1003,10 @@ test("evening shift in IANATimeZone 2005_05_05_05_10", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -1118,6 +1146,10 @@ test("evening shift in IANATimeZone 2006_06_06_06_12", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -1259,6 +1291,10 @@ test("evening shift in IANATimeZone 2007_07_07_07_14", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -1398,6 +1434,10 @@ test("evening shift in IANATimeZone 2008_08_08_08_16", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -1539,6 +1579,10 @@ test("evening shift in IANATimeZone 2009_09_09_09_18", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -1678,6 +1722,10 @@ test("evening shift in IANATimeZone 2010_10_10_10_20", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -1819,6 +1867,10 @@ test("evening shift in IANATimeZone 2011_11_11_11_22", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -1958,6 +2010,10 @@ test("evening shift in IANATimeZone 2012_12_12_12_24", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -2099,6 +2155,10 @@ test("evening shift in IANATimeZone 2013_03_13_13_26", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -2238,6 +2298,10 @@ test("evening shift in IANATimeZone 2014_04_14_14_28", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -2379,6 +2443,10 @@ test("evening shift in IANATimeZone 2015_05_15_15_30", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -2518,6 +2586,10 @@ test("evening shift in IANATimeZone 2016_06_16_16_32", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -2659,6 +2731,10 @@ test("evening shift in IANATimeZone 2017_07_17_17_34", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -2798,6 +2874,10 @@ test("evening shift in IANATimeZone 2018_08_18_18_36", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -2939,6 +3019,10 @@ test("evening shift in IANATimeZone 2019_09_19_19_38", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -3078,6 +3162,10 @@ test("evening shift in IANATimeZone 2020_02_20_20_40", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -3219,6 +3307,10 @@ test("evening shift in IANATimeZone 2021_01_21_21_42", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -3358,6 +3450,10 @@ test("evening shift in IANATimeZone 2022_02_22_22_44", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
@@ -3499,6 +3595,10 @@ test("evening shift in IANATimeZone 2023_03_23_23_46", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
+  );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
     !isDayShiftIn(TZ.UTC_P12) && !isNightShiftIn(TZ.UTC_P12)
@@ -3638,6 +3738,10 @@ test("evening shift in IANATimeZone 2024_04_24_00_48", () => {
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P1030)).toEqual(
     !isDayShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
+  );
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isEveningShiftIn(TZ.UTC_P11)).toEqual(
+    !isDayShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(false);
   expect(isEveningShiftIn(TZ.UTC_P12)).toEqual(
