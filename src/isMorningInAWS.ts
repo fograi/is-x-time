@@ -3,6 +3,5 @@ import { AWSRegionTZ } from "./constants/aws-region-timezones";
 import { isMorningIn } from "./isMorningIn";
 
 export function isMorningInAWS(awsrc: AWSRegionCode) {
-  const tz = AWSRegionTZ.get(awsrc);
-  return tz ? isMorningIn(tz) : tz;
+  return isMorningIn(AWSRegionTZ[awsrc]);
 }
