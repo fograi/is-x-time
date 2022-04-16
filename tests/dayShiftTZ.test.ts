@@ -859,7 +859,7 @@ test("day shift in IANATimeZone 2004_04_04_04_08", () => {
   expect(isDayShiftIn(TZ.UTC_P1030)).toEqual(
     !isEveningShiftIn(TZ.UTC_P1030) && !isNightShiftIn(TZ.UTC_P1030)
   );
-  expect(isDayShiftIn(TZ.UTC_P11)).toEqual(false);
+  expect(isDayShiftIn(TZ.UTC_P11)).toEqual(true);
   expect(isDayShiftIn(TZ.UTC_P11)).toEqual(
     !isEveningShiftIn(TZ.UTC_P11) && !isNightShiftIn(TZ.UTC_P11)
   );
