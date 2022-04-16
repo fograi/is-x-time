@@ -2,6 +2,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import packageJson from "./package.json";
 import { terser } from "rollup-plugin-terser";
+import filesize from "rollup-plugin-filesize";
 export default {
   input: "./src/index.ts",
   output: [
@@ -23,5 +24,5 @@ export default {
       banner: ";",
     },
   ],
-  plugins: [commonjs(), typescript(), terser()],
+  plugins: [commonjs(), typescript(), terser(), filesize()],
 };
