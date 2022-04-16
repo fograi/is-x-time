@@ -88,6 +88,10 @@ Using npm:
 npm i is-x-time
 ```
 
+## Size
+
+![Bundle Sizes](/docs/gfx/build/bundle-size.png)
+
 ## Usage
 
 ```js
