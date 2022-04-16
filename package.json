@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fograi/is-x-times.git"
+    "url": "git+https://github.com/fograi/is-x-time.git"
   },
   "keywords": [
     "time",
@@ -37,9 +37,9 @@
   "author": "Marty McFly <dev@fogr.ai> (fogr.ai)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fograi/is-x-times/issues"
+    "url": "https://github.com/fograi/is-x-time/issues"
   },
-  "homepage": "https://github.com/fograi/is-x-times#readme",
+  "homepage": "https://github.com/fograi/is-x-time#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
     "@types/jest": "^27.4.1",
