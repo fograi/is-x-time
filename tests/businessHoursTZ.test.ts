@@ -280,7 +280,7 @@ test("business hours in IANATimeZone 2005_05_05_05_10", () => {
   expect(isBusinessHoursIn(TZ.UTC_P930)).toEqual(true);
   expect(isBusinessHoursIn(TZ.UTC_P10)).toEqual(true);
   expect(isBusinessHoursIn(TZ.UTC_P1030)).toEqual(true);
-  expect(isBusinessHoursIn(TZ.UTC_P11)).toEqual(false);
+  expect(isBusinessHoursIn(TZ.UTC_P11)).toEqual(true);
   expect(isBusinessHoursIn(TZ.UTC_P12)).toEqual(false);
   expect(isBusinessHoursIn(TZ.UTC_P1245)).toEqual(false);
   expect(isBusinessHoursIn(TZ.UTC_P13)).toEqual(false);
