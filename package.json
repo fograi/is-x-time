@@ -32,7 +32,14 @@
     "time",
     "date",
     "now",
-    "time-of-day"
+    "time-of-day",
+    "day",
+    "night",
+    "morning",
+    "afternoon",
+    "evening",
+    "business hours",
+    "shift work hours"
   ],
   "author": "Marty McFly <dev@fogr.ai> (fogr.ai)",
   "license": "ISC",
