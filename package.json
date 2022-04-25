@@ -1,6 +1,6 @@
 {
   "name": "is-x-time",
-  "version": "0.0.0-alpha.2",
+  "version": "1.0.0",
   "description": "Returns boolean for various time-of-day queries such as isNight and isBusinessHours",
   "browser": "dist/web.is-x-time.js",
   "main": "dist/is-x-time.js",
@@ -32,7 +32,14 @@
     "time",
     "date",
     "now",
-    "time-of-day"
+    "time-of-day",
+    "day",
+    "night",
+    "morning",
+    "afternoon",
+    "evening",
+    "business hours",
+    "shift work hours"
   ],
   "author": "Marty McFly <dev@fogr.ai> (fogr.ai)",
   "license": "ISC",
@@ -41,7 +48,7 @@
   },
   "homepage": "https://github.com/fograi/is-x-time#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-commonjs": "^22.0.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.21",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
