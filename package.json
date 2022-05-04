@@ -57,7 +57,7 @@
     "husky": "^7.0.0",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.7",
-    "release-it": "^14.14.0",
+    "release-it": "^15.0.0",
     "rollup": "^2.70.0",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-terser": "^7.0.2",
